@@ -4,12 +4,11 @@ import pandas as pd
 import pickle
 
 app = Flask(__name__)
-model = pickle.load(open('model.pkl', 'rb'))
-model1 = pickle.load(open('model1.pkl', 'rb'))
+model = pickle.load(open('models/model.pkl', 'rb'))
+model1 = pickle.load(open('models/model1.pkl', 'rb'))
 
 
 @app.route('/')
-# @cross_origin()
 def home():
     return render_template("index.html")
 
@@ -54,6 +53,8 @@ def predict():
             g = "continue in"
             return render_template('index.html', result='The employee is more likely to {} the organization!'.format(g))
 
-
 if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=2764)
+    app.run(host="127.0.0.1", port=2764, debug=True)
+
+# if __name__ == "__main__":
+#     app.run(host="127.0.0.1", port=2764)
