@@ -29,6 +29,22 @@ input{
 
 } 
 
+#heading {
+    text-align: center;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+#subheading {
+    text-align: center;
+    font-size: 16px;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+
 #heading{
 margin-top: 1cm;
 font-size: 40px;
